@@ -19,4 +19,8 @@ Max 10 per dish per order; duplicate dish names rejected
 Run
 python3 main.py
 
-Files: main.py (menu loop, summary), menu.py (menu data + input helpers), cart.py (cart + checkout), data.py (shared lists/dicts/settings).
+Files: main.py (menu loop, summary), menu.py (menu data + input helpers), cart.py (cart + checkout), data.py (shared lists/dicts/settings), gui.py (optional tkinter interface).
+
+Optional GUI
+
+python3 gui.py opens a tkinter window (Order / Manage Menu / Sales Summary tabs). It re-uses the same data and logic. The terminal version (python3 main.py) is unchanged. On Linux you may need: sudo apt install python3-tk
