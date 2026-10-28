@@ -1,4 +1,3 @@
-
 """menu.py - input helpers and menu management (add/view/update/remove)."""
 from data import menu_items, cart, CATEGORIES, MAX_QTY
  
