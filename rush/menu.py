@@ -81,4 +81,3 @@ def add_to_cart():
         line["qty"] = total_qty
         print(f"  Added {qty} x {item['name']} to cart.")
  
-Claude finished the response
