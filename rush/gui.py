@@ -146,12 +146,7 @@ def setup_style(root):
             pass
     style = ttk.Style(root)
     style.theme_use("clam")
-    style.configure(".", backgroundz2t3c1% python3 gui.py
-  File "/home/sileepon/Desktop/Rush00/rush/gui.py", line 656
-    Claude finished the response
-           ^^^^^^^^
-SyntaxError: invalid syntax
-z2t3c1% =BG, foreground=TEXT, font=(family, 11))
+    style.configure(".", background=BG, foreground=TEXT, font=(family, 11))
     style.configure("TFrame", background=BG)
     style.configure("Card.TFrame", background=CARD)
     style.configure("TLabel", background=BG, foreground=TEXT)
@@ -175,12 +170,7 @@ z2t3c1% =BG, foreground=TEXT, font=(family, 11))
               foreground=[("selected", "white")])
  
     style.configure("Treeview", background="white", fieldbackground="white",
-                    foreground=TEXT,z2t3c1% python3 gui.py
-  File "/home/sileepon/Desktop/Rush00/rush/gui.py", line 656
-    Claude finished the response
-           ^^^^^^^^
-SyntaxError: invalid syntax
-z2t3c1%  rowheight=30, borderwidth=0, font=(family, 11))
+                    foreground=TEXT, rowheight=30, borderwidth=0, font=(family, 11))
     style.configure("Treeview.Heading", background=GREEN, foreground="white",
                     font=(family, 11, "bold"), relief="flat", padding=(6, 7))
     style.map("Treeview.Heading", background=[("active", DARK)])
@@ -525,12 +515,7 @@ class JasmineApp:
  
     def refresh_manage(self):
         clear_tree(self.manage_tree)
-        for index, item in enumerate(menu_items):z2t3c1% python3 gui.py
-  File "/home/sileepon/Desktop/Rush00/rush/gui.py", line 656
-    Claude finished the response
-           ^^^^^^^^
-SyntaxError: invalid syntax
-z2t3c1% 
+        for index, item in enumerate(menu_items):
             self.manage_tree.insert("", "end", iid=str(item["id"]), tags=(stripe(index),),
                                     values=(item["id"], item["name"], item["category"],
                                             f"{item['price']:.2f}", item["stock"]))
@@ -667,3 +652,4 @@ def main():
  
 if __name__ == "__main__":
     main()
+ 
