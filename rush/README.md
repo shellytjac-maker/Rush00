@@ -1,26 +1,36 @@
-Jasmine Restaurant
+# Jasmine Restaurant
 
-A terminal restaurant ordering app (Python, standard library only).
+A terminal food-ordering app written in Python (standard library only).
 
-Purpose
+## Purpose
+Customers browse the menu, add dishes to a cart, edit the cart and check out.
 
-Customers browse the menu, build a cart and pay; staff manage dishes and see sales.
+## Features
+1. See menu: all items, by category, or lowest price to highest
+2. Add to cart: choose a dish by id and a quantity
+3. View/Edit cart: change a quantity, remove a dish, or clear the cart
+4. Check out: shows the final price, updates stock, empties the cart
+5. Exit
 
-Features
-Browse menu: sort by price, filter by category, search by name, cheapest/priciest
-Cart: add, change quantity, remove, clear
-Checkout with discount, payment check, stock update
-Manage menu: add / update / remove dishes
-Sales summary: revenue, average order, best seller, ranking
-Business rules
-Sold-out dishes / quantity above stock are rejected
-Max 10 per dish per order; duplicate dish names rejected
-10% discount when subtotal >= 500; empty cart and insufficient payment rejected
-Run
-python3 main.py
+## Data structures
+- `menu_items`: a list of dictionaries (one per dish)
+- `cart`: a list of dictionaries (`id` and `qty`)
 
-Files: main.py (menu loop, summary), menu.py (menu data + input helpers), cart.py (cart + checkout), data.py (shared lists/dicts/settings), gui.py (optional tkinter interface).
+## Business rules
+- The dish id must exist
+- Sold-out dishes cannot be ordered
+- Maximum 10 of one dish per order
+- Quantity cannot be more than the stock
+- A 10% discount applies when the subtotal is 500 or more
+- Checkout is refused when the cart is empty
 
-Optional GUI
+## Data processing
+- Filtering the menu by category
+- Sorting the menu by price
+- Calculating the cart subtotal and discount
 
-python3 gui.py opens a tkinter window (Order / Manage Menu / Sales Summary tabs). It re-uses the same data and logic. The terminal version (python3 main.py) is unchanged. On Linux you may need: sudo apt install python3-tk
+## Files
+- `main.py`: main menu loop
+- `menu.py`: input helper, menu viewing, adding to the cart
+- `cart.py`: view/edit cart and checkout
+- `data.py`: shared data and settings
